@@ -1,17 +1,18 @@
 #!/bin/sh
+
 path=$(pwd)
-# Home directory
-# ln -sf 
-# ln -sf 
-# ln -sf 
-# ln -sf 
-# ln -sf 
-# ln -sf 
-# ln -sf 
-# ln -sf 
+
+create_update_dotdir() {
+    [ -d $1 ] && rm -rf $1 ; ln -s $2 $1
+}
+
+
+create_update_dotfile() {
+    [ -f $1 ] && rm $1 ; ln -s $2 $1
+}
 
 create_update_dotconfig() {
-    ([ -d $1 ] && rm -rf $1) ||([ -f $1 ] && rm $1)  ; ln -s $2 $1
+    ([ -d $1 ] && rm -rf $1) ||([ -f $1 ] && rm $1) ; ln -s $2 $1
 }
 
 # Home directory
@@ -25,12 +26,10 @@ create_update_dotconfig $HOME/.zshenv $path/.zshenv
 create_update_dotconfig $HOME/.zshrc $path/.zshrc 
 
 # Config directory
-Create_update_dotconfig $HOME/.config $path/config
-
-# # DO NOT FORGET TO IMPLEMENT VSCODE SETTINGS
+create_update_dotconfig $HOME/.config $path/config
 
 # Local directory
-create_update_dotconfig $HOME/.local/ $path/.local
+create_update_dotconfig $HOME/.local $path/.local
 
 # # check if running wsl 
 # # [ -d /mnt/c ] && 
