@@ -29,6 +29,6 @@
 	stripLeadingSymbols = false
 	markEmptyLines = false
 	rulerWidth =
-  useUnicodeRuler = false
+  seUnicodeRuler = false
 [credential "https://github.com"]
 	helper = !gh auth git-credential
