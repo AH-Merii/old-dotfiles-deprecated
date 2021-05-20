@@ -2,15 +2,6 @@
 
 path=$(pwd)
 
-create_update_dotdir() {
-    [ -d $1 ] && rm -rf $1 ; ln -s $2 $1
-}
-
-
-create_update_dotfile() {
-    [ -f $1 ] && rm $1 ; ln -s $2 $1
-}
-
 create_update_dotconfig() {
     ([ -d $1 ] && rm -rf $1) ||([ -f $1 ] && rm $1) ; ln -s $2 $1
 }
