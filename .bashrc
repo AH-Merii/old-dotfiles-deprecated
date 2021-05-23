@@ -117,3 +117,6 @@ if ! shopt -oq posix; then
 fi
 
 cd ~
+
+# for f in $HOME/.config/shell_config/*; do source $f; done
+
