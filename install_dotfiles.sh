@@ -15,6 +15,7 @@ create_update_dotconfig $HOME/.zcompdump $path/.zcompdump
 create_update_dotconfig $HOME/.zprofile $path/.zprofile 
 create_update_dotconfig $HOME/.zshenv $path/.zshenv 
 create_update_dotconfig $HOME/.zshrc $path/.zshrc 
+create_update_dotconfig $HOME/.p10k.zsh $path/.p10k.zsh
 
 # Config directory
 create_update_dotconfig $HOME/.config $path/config
