@@ -48,9 +48,10 @@ source /$HOME/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev
 # Suggest aliases for commands
 source /$HOME/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
 # Search repos for programs that can't be found
-source /$HOME/zsh-command-not-found/command-not-found.plugin.zsh 2>/dev/null
+source /$HOME/plugins/zsh-command-not-found/command-not-found.plugin.zsh 2>/dev/null
 # Auto suggestion based on history
-source /$HOME/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /$HOME/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+
 
 # Allow cd without explicit command
 setopt autocd
