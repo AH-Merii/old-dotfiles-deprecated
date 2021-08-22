@@ -9,7 +9,8 @@ zsh \
 unzip \
 jq \
 fontconfig \ 
-make
+make \
+batcat
 
 # download and install lsd (LSDeluxe)
 curl -Ls https://api.github.com/repos/Peltoche/lsd/releases/latest | grep -o https.*lsd_.*amd64.deb | wget -qi -
