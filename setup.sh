@@ -42,14 +42,9 @@ cd ~/dotfiles
 [ ! -d ~/plugins ] && mkdir ~/plugins # the use of the exclacamtion mark is not allowing the program to run need to figure out how to use the not operation!
 [ ! -d ~/themes ] && mkdir ~/themes
 
-# download and install FiraCode (need to manually install in windows)
-sh install_firacode.sh
-
 # change defualt shell to zsh
 sudo chsh -s $(which zsh) $(whoami)
-
-exec /bin/zsh
-
+cd ~
 # installing miniconda
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
@@ -61,4 +56,11 @@ rm -rf ~/miniconda3/miniconda.sh
 # installing mamba
 conda install mamba -n base -c conda-forge
 
+# install poetry and add autocomplete
+curl -sSL https://install.python-poetry.org | python3 -
+~/.local/bin/poetry completions zsh > ~/.zfunc/_poetry
 
+# download and install FiraCode (need to manually install in windows)
+sh ~/dotfiles/install_firacode.sh
+
+exec /bin/zsh
