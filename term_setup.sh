@@ -35,13 +35,17 @@ git_clone_pull_repo git@github.com:Tarrasch/zsh-command-not-found.git ~/plugins
 git_clone_pull_repo git@github.com:MichaelAquilina/zsh-you-should-use.git ~/plugins
 git_clone_pull_repo git@github.com:zsh-users/zsh-autosuggestions.git ~/plugins
 
+cd ~/dotfiles
+
 # create a directory for bash/zsh scripts and themes
 [ ! -d ~/plugins ] && mkdir ~/plugins # the use of the exclacamtion mark is not allowing the program to run need to figure out how to use the not operation!
 [ ! -d ~/themes ] && mkdir ~/themes
 
+# download and install FiraCode (need to manually install in windows)
+sh install_firacode.sh
+
 # change defualt shell to zsh
 sudo chsh -s $(which zsh) $(whoami)
-
 
 exec /bin/zsh
 
@@ -55,3 +59,5 @@ rm -rf ~/miniconda3/miniconda.sh
 
 # installing mamba
 conda install mamba -n base -c conda-forge
+
+
