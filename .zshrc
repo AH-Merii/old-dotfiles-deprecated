@@ -14,16 +14,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
-
-autoload -U compinit && compinit -u
-zstyle ':completion:*' menu select
-# Auto complete with case insenstivity
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files.
-
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
