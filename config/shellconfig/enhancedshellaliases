@@ -1,1 +1,1 @@
-alias ls="lsd";alias la="lsd -Fla";alias code="code-insiders";alias bat="batcat"
+alias ls="lsd";alias la="lsd -Fla";alias lst="lsd --tree";alias code="code";alias bat="batcat";alias conda="mamba";
