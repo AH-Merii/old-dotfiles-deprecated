@@ -60,6 +60,9 @@ conda install mamba -n base -c conda-forge
 curl -sSL https://install.python-poetry.org | python3 -
 ~/.local/bin/poetry completions zsh > ~/.zfunc/_poetry
 
+# install node and node version manager
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
 # download and install FiraCode (need to manually install in windows)
 sh ~/dotfiles/install_firacode.sh
 

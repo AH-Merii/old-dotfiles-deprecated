@@ -17,6 +17,9 @@ HISTFILE=~/.cache/zsh/history
 autoload -U compinit && compinit -u
 zstyle ':completion:*' menu select
 
+# Auto complete with case insenstivity
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
@@ -97,3 +100,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 export PATH="$HOME/.local/bin:$PATH"
+
+# Add node version manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
