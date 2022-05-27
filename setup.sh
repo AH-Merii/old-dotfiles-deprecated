@@ -10,8 +10,8 @@ git_clone_pull_repo() {
     if cd "$directory/$repo_name"; then git pull; else git clone --depth=1 $repo "$directory/$repo_name"; fi
 }
 
-sudo apt update
-sudo apt upgrade
+sudo apt -y update
+sudo apt -y upgrade
 
 # install packages 
 yes Y | sudo apt install \
@@ -62,6 +62,16 @@ curl -sSL https://install.python-poetry.org | python3 -
 
 # install node and node version manager
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# install latest version of podman from github
+cd /tmp
+curl -fsSL -o podman-linux-amd64.tar.gz https://github.com/mgoltzsche/podman-static/releases/latest/download/podman-linux-amd64.tar.gz
+tar -xzf podman-linux-amd64.tar.gz
+sudo cp -r podman-linux-amd64/usr podman-linux-amd64/etc /
+cd ~
+
+# empty /tmp dir
+sudo find /tmp/* -exec rm -rf {} +
 
 # download and install FiraCode (need to manually install in windows)
 sh ~/dotfiles/install_firacode.sh
