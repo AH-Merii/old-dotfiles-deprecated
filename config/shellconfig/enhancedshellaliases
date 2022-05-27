@@ -1,1 +1,1 @@
-alias ls="lsd";alias la="lsd -Fla";alias lst="lsd --tree";alias code="code";alias bat="batcat";alias cat="bat --paging=never";alias conda="mamba";
+alias ls="lsd";alias la="lsd -Fla";alias lst="lsd --tree";alias code="code";alias cat="bat --paging=never";alias bat="batcat";
