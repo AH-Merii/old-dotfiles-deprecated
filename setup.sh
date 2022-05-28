@@ -68,7 +68,12 @@ cd /tmp
 curl -fsSL -o podman-linux-amd64.tar.gz https://github.com/mgoltzsche/podman-static/releases/latest/download/podman-linux-amd64.tar.gz
 tar -xzf podman-linux-amd64.tar.gz
 sudo cp -r podman-linux-amd64/usr podman-linux-amd64/etc /
+# install podman-compose
+curl -o ~/.local/bin/podman-compose https://raw.githubusercontent.com/containers/podman-compose/devel/podman_compose.py
+chmod +x ~/.local/bin/podman-compose
 cd ~
+
+
 
 # empty /tmp dir
 sudo find /tmp/* -exec rm -rf {} +
